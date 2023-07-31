@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>ASYNC</h1>
+        <div>
+            <h3>Ejercicio 1</h3>
+            <label for="pokemon">Ingresa el nombre o id del pokemon que quieras consultar</label>
+            <input type="text" id="pokemon" name="pokemon">
+            <button onclick="ejercicio1(document.getElementById(`pokemon`).value)">Obtener datos</button>
+            <div id="datosPokemon">
+                <p>ID: <span id="idPokemon"></span></p>
+                <p>Nombre Pokemon: <span id="namePokemon"></span></p>
+                <p>Tipo de pokemon:</p>
+                <ul id="typePokemon">
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Ejercicio 2</h3>
+            <label for="nombreLibro">Ingresa el nombre del libro que quieres buscar</label>
+            <input type="text" id="nombreLibro" name="nombreLibro">
+            <button onclick="ejercicio2(document.getElementById(`nombreLibro`).value)">Buscar Libro</button>
+            <div id="datosLibro">
+                <p>Año de publicacion: <span id="anoPublicacionLibro"></span></p>
+                <p>Nombre Libro: <span id="nombreLibroEncontrado"></span></p>
+                <p>Autor(es): </p>
+                <ul id="autoresLibro">
+
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Ejercicio 3</h3>
+            <label for="nombreAutor">Ingresa el nombre del autor para ver sus libros</label>
+            <input type="text" id="nombreAutor" name="nombreAutor">
+            <label for="limitResults">Numero de resultados a mostrar</label>
+                <select name="limitResults" id="limitResults">
+                    <option value="">Escoje un numero</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            <button onclick="ejercicio3(document.getElementById(`nombreAutor`).value, document.getElementById(`limitResults`).value)">Buscar libros por autor</button>
+            <div id="datosLibro">
+                <p>Buscando <span id="buscandoAutor"></span></p>
+                <p>Libros encontrados: </p>
+                <ul id="librosDelAutor">
+
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Ejercicio 4</h3>
+            <label for="nombreBandaBuscar">Ingresa el nombre de la banda</label>
+            <input type="text" id="nombreBandaBuscar" name="nombreBandaBuscar">
+            <button onclick="ejercicio4(document.getElementById(`nombreBandaBuscar`).value)">Buscar banda por nombre</button>
+            <div id="datosBanda">
+                <p>Banda encontrada: <span id="nombreBanda"></span></p>
+                <p>Año de creacion: <span id="anoCreacionBanda"></span></p>
+                <p>Pais: <span id="paisBanda"></span></p>
+                <p>Genero: <span id="generoBanda"></span></p>
+            </div>
+        </div>
+        <div>
+            <h3>Ejercicio 5</h3>
+            <label for="idPersonajeBuscar">Ingresa un numero para obtener un personaje (max 82)</label>
+            <input type="text" id="idPersonajeBuscar" name="idPersonajeBuscar">
+            <button onclick="ejercicio5(document.getElementById(`idPersonajeBuscar`).value)">Buscar personaje por id</button>
+            <div id="datosPersonaje">
+                <p>Personaje: <span id="personajeEncontrado"></span></p>
+                <p>Pelicula en las que aparece:</p>
+                <ul id="peliculasPersonaje">
+
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Ejercicio 6</h3>
+            <button onclick="ejercicio6()">Obtener informacion de asteroides cerca a la tierra de la ultima semana</button>
+            <div id="datosPersonaje">
+                <p>Asteroides cerca a las tierra desde el dia <span id="fechaInicial"></span> hasta el dia de ayer <span id="fechaFinal"></span></p>
+                <ul id="fechaEncontrada">
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Ejercicio 7</h3>
+            <button onclick="ejercicio7()">Haz click para tener los datos de 150 pokemon</button>
+            <div id="datosPokemon150">
+                <ul id="listaPokemons">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
